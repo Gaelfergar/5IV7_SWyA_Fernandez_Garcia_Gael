@@ -1,0 +1,44 @@
+*{
+    background-color:#2B2B2B;
+    font-size: 20px;
+    font-family: 'Helvetica';
+    color:#F7F7F5;
+}
+
+.div-casita{
+    display:flex;
+    width: 100%;
+}
+
+.casita{
+    position: absolute;
+    margin-left:5%;
+    margin-top: 26px;
+    top:0;
+    left:0;
+    width: 50px;
+    height: 50px;
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    align-items: center;
+    text-align: center;
+}
+
+textarea{
+    align-items: center;
+}
+
+#resultado{
+    align-items: center;
+    text-align: center;
+    color: greenyellow;
+}
+
+input{
+    padding: 5px;
+}
