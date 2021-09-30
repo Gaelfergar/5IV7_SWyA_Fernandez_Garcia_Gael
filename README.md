@@ -1,1 +1,0 @@
-# 5IV7_SWyA_Fernandez_Garcia_Gael git init git add README.md git commit -m first commit git branch master git remote add origin https://github.com/Gaelfergar/5IV7_SWyA_Fernandez_Garcia_Gael.git git push -u origin main
