@@ -64,13 +64,13 @@ var cesar = cesar || (function(){
 //funcion de cifrado
 function cifrar(){
     document.getElementById("resultado").innerHTML =
-    cesar.encode(document.getElementById("cadena").value, 3);
+    cesar.encode(document.getElementById("cadena").value, parseInt(document.getElementById("desp").value));
 }
 
 //funcion de descifrado
 function descifrar(){
-    document.getElementById("resultado").innerHTML =
-    cesar.decode(document.getElementById("cadena").value, 3);
+    document.getElementById("resultado").innerHTML = 
+    cesar.decode(document.getElementById("cadena").value, parseInt(document.getElementById("desp").value));
 }
 
 //cambiar cifrado con radio buttons
@@ -84,3 +84,4 @@ function cambiarci(){
         window.location.assign('Ejemplo_Vigenere_2.html');
     }
 }
+
