@@ -17,7 +17,17 @@
     <br>
     <h1>Ejemplo de cifrado con el algoritmo de Vigenere</h1>
     <br>
-    <p>Escribe el texto a cifrar: <br><textarea id="mess" cols="30" rows="5"></textarea></p>
+    <br>
+    <table>
+        <tr>
+            <td><p class="espaciado">Seleccione el algoritmo de cifrado: </p></td>
+            <td><input type="radio" name="style" id="ci1">César</td>
+            <td><input style="margin-left: 10px;" type="radio" name="style" id="ci2">Vigenere</td>
+            <td><button onclick="cambiarci()">Elegir</button></td>
+        </tr>
+    </table>
+    <br>
+    <p>Escribe el texto a cifrar: <input type="text" size="30" id="mess" ></textarea></p>
     <br>
     <p>Escribe la llave para cifrar:  <input id="llave"></p>
     <br>
@@ -25,6 +35,7 @@
         <button id="ci">Cifrar</button>
         <button id="de">Descifrar</button>
     </p>
+    <br>
     <p>
         <!--Resultado-->
         <input id="rs">

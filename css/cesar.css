@@ -42,3 +42,17 @@ textarea{
 input{
     padding: 5px;
 }
+
+.espaciado{
+    margin-left: 10%;
+}
+
+table{
+    margin: auto;
+    text-align: left;
+    width: 50%;
+}
+
+td{
+    vertical-align: top;
+}

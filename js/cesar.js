@@ -72,3 +72,15 @@ function descifrar(){
     document.getElementById("resultado").innerHTML =
     cesar.decode(document.getElementById("cadena").value, 3);
 }
+
+//cambiar cifrado con radio buttons
+function cambiarci(){
+    if (document.getElementById("ci1").checked){
+        window.location = 'Ejemplo_Cesar_1.html';
+        window.location.assign('Ejemplo_Cesar_1.html');
+    }
+    else if (document.getElementById("ci2").checked){
+        window.location = 'Ejemplo_Vigenere_2.html';
+        window.location.assign('Ejemplo_Vigenere_2.html');
+    }
+}

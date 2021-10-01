@@ -17,10 +17,22 @@
     <h1>Ejemplo de cifrado con el algoritmo de César</h1>
     <br>
     <br>
-    <p><textarea id="cadena" cols="30" rows="10"></textarea></p>
+    <table>
+        <tr>
+            <td><p class="espaciado">Seleccione el algoritmo de cifrado: </p></td>
+            <td><input type="radio" name="style" id="ci1">César</td>
+            <td><input style="margin-left: 10px;" type="radio" name="style" id="ci2">Vigenere</td>
+            <td><button onclick="cambiarci()">Elegir</button></td>
+        </tr>
+    </table>
     <br>
-    <p><input type="button" value="Cifrar" onclick="cifrar()" >
-        <input type="button" value="Descifrar" onclick="descifrar()" ></p>
+    <p>Escribe el texto a cifrar:  <input type="text" size="30" id="cadena"></textarea></p>
+    <br>
+    <p>
+        <input type="button" value="Cifrar" onclick="cifrar()">
+        <input type="button" value="Descifrar" onclick="descifrar()">
+    </p>
+    <br>
     <div id="resultado"></div>
     <script src="js/cesar.js" ></script>
 </body>
