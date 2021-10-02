@@ -7,8 +7,6 @@ let key = "";
 
 
 $(document).ready(function(){
-
-    //CIFRAR
     $('#ci').click(function(){
 
         //para cifrar vamos a usar la funcion
@@ -35,7 +33,6 @@ $(document).ready(function(){
             for(var i = 0; i<mess.length; i++){
                 keyComplete += key.charAt((i%Number(key.length)));
             }
-            alert(keyComplete);
 
             for(var i = 0; i<mess.length; i++){
                 //obtener la poscion de la letra por letra del mensaje
@@ -44,9 +41,9 @@ $(document).ready(function(){
 
                 charr = keyComplete.charAt(i);
                 let posk = getPosition(charr);
-
                 //ejecutamos el algoritmo
 
+                
                 let newVal = change(posm, posk);
 
                 newMess += abc[newVal];  //mensaje cifrado
@@ -59,8 +56,6 @@ $(document).ready(function(){
 
 
     });
-
-    //DESCIFRAR
     $('#de').click(function(){
 
         //para cifrar vamos a usar la funcion
@@ -87,7 +82,6 @@ $(document).ready(function(){
             for(var i = 0; i<mess.length; i++){
                 keyComplete += key.charAt((i%Number(key.length)));
             }
-            alert(keyComplete);
 
             for(var i = 0; i<mess.length; i++){
                 //obtener la poscion de la letra por letra del mensaje
@@ -109,7 +103,6 @@ $(document).ready(function(){
             //aqui es si no se cumple las condiciones
         }
 
-
     });
 
 });
@@ -125,7 +118,7 @@ function change(posm, posk){
 function rechange(posm, posk){
     let val = 0;
     if((posm-posk)>=0){
-        val = (posm+posk)%27;
+        val = (posm-posk)%27;
     }else{
         val = (posm-posk+27)%27;
     }
@@ -160,34 +153,18 @@ function revision(mess, desp){
 
 function sd(){
     //alert para decir que el texto no ha sido aceptado
-    Swal.fire({
-        title:"Error",
-        text:"El texto ingreso no ha sido aceptado, ingrese solo minuscilas y evite numeros y simbolos",
-        icon: 'error'
-    });
-
     alert("El texto ingreso no ha sido aceptado, ingrese solo minuscilas y evite numeros y simbolos");
 }
 
 
 function sdd(){
     //alert para decir que el texto no ha sido aceptado
-    Swal.fire({
-        title:"Error",
-        text:"La clave ingresa es incorrecta, no cumple con las normas de solo minusculas y no usar numeros y/o simbolos",
-        icon: 'error'
-    });
 
     alert("La clave ingresa es incorrecta, no cumple con las normas de solo minusculas y no usar numeros y/o simbolos");
 }
 
 function sz(){
     //alert para decir que el texto no ha sido aceptado
-    Swal.fire({
-        title:"Error",
-        text:"La clave no puede ser mayor que el mensaje",
-        icon: 'error'
-    });
 
     alert("La clave no puede ser mayor que el mensaje");
 }

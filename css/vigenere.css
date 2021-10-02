@@ -34,7 +34,7 @@ textarea{
     align-items: center;
 }
 
-#rs{
+.resultado{
     border: none;
     align-items: center;
     text-align: center;
