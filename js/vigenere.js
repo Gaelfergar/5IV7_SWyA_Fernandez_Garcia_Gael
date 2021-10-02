@@ -7,6 +7,8 @@ let key = "";
 
 
 $(document).ready(function(){
+
+    //CIFRAR
     $('#ci').click(function(){
 
         //para cifrar vamos a usar la funcion
@@ -57,6 +59,8 @@ $(document).ready(function(){
 
 
     });
+
+    //DESCIFRAR
     $('#de').click(function(){
 
         //para cifrar vamos a usar la funcion
