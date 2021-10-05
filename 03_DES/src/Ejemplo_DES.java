@@ -1,4 +1,11 @@
-package Ejemplo_DES;
+/*
+DES
+Cifrado simétrico
+Modo de bloque 64 bits
+LLave privada de 64 bits, es decir, 8 caracteres
+Solo se toman 54 bits para la llave (8x7)
+*/
+
 import javax.crypto.*;
 
 //genera llaves
@@ -155,4 +162,3 @@ public static void mostrarBytes(byte[] buffer){
     System.out.write(buffer, 0, buffer.length);
 }
 }
-
