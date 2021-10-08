@@ -15,9 +15,6 @@ import javax.crypto.spec.*;
 import java.security.*;
 import java.security.spec.InvalidKeySpecException;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import java.io.*;
 
 public class Tarea_DES {
