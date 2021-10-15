@@ -5,7 +5,7 @@
     font-family: 'Helvetica';
 }
 
-.cesar{
+.p1{
     padding: 10px;
     border-radius: 10px;
     background-color: black;
@@ -13,18 +13,18 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -0%);
 }
 
-.vigenere{
+.p2{
     padding: 10px;
     border-radius: 10px;
-    background-color: #FEFEFC;
-    color: black;
+    background-color: black;
+    color:#FEFEFC;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -0%);
 }
 
 img{

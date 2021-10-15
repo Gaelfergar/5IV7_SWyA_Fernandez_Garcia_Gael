@@ -5,32 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo de Cifrado AES Web</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="css/aes.css">
+    <link rel="shortcut icon" href="https://myareanetwork-photos.s3.amazonaws.com/bizlist_photos/f/311316_1553589413.png">
 </head>
 <body>
-    <h1>Este es un ejemplo del cifrado AES</h1>
-    <br>
-    Vamos a ocupar la librería cloudfire crypto.js
-    <br>
-    https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js
-    <br>
+    <div class="main-container">
+        <div class="div-casita">
+            <a href="../index.html">
+                <img class="casita" src="https://notairesthenri.com/images/home.png">
+            </a>
+        </div>
+        <br>
+        <h1 class="título">Ejemplo de cifrado AES</h1>
+        <br>
 
-    <br>
-    <strong><label>Mensaje: </label></strong>
-    <span id="demo00"></span>
-    <br><br>
+        <div class="div-izq">
+            <p>Escribe el texto a cifrar: </p>
+            <textarea type="text" id="demo00" class="textarea"></textarea>
+            <br>
+            <p>Escribe la llave para cifrar: </p>
+            <input type="text" id="llave" maxlength="28" class="text">
+        </div>
+        
+        <div class="div-der">
+            <div class="dd-izq">
+                <p><strong><label>Cifrado: </label></strong></p>
+                <p><input type="text" readonly id="demo01" class="text2"></span></p>
+            </div>
+            <div class="dd-der">
+                <p><strong><label>Descifrado sin formato: </label></strong></p>
+                <p><input type="text" readonly id="demo02" class="text2"></span></p>
+            </div>
+            <div class="dd-inf">
+                <br>
+                <p><strong><label>Descifrado con formato: </label></strong></p>
+                <textarea type="text" readonly id="demo03" class="textarea2"></textarea>
+            </div>
+        </div>
+        
+        <div class="div-inf">
+            <p><input type="button" value="Cifrar" id="ci" class="botón"></p>
+        </div>
 
-    <strong><label>Cifrado: </label></strong>
-    <span id="demo01"></span>
-    <br><br>
+    </div>
     
-    <strong><label>Descifrado: </label></strong>
-    <span id="demo02"></span>
-    <br><br>
-
-    <strong><label>Descifrado con formato: </label></strong>
-    <span id="demo03"></span>
-    <br><br>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="js/aes.js"></script>
 </body>
