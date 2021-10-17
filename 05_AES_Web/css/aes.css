@@ -7,13 +7,13 @@
 body{
     background-color: rgb(17,17,17);
     padding:18px;
+    overflow: hidden;
 }
 
 .div-casita{
     display:flex;
     width: 100%;
 }
-
 .casita{
     position: absolute;
     margin-left:5%;
@@ -23,7 +23,6 @@ body{
     width: 50px;
     height: 50px;
 }
-
 .main-container{
     margin-left: auto;
     margin-right: auto;
@@ -32,58 +31,79 @@ body{
     padding: 20px;
 }
 
+
+
+/**********/
+/* TEXTOS */
+/**********/
 .título{
     text-align: center;
 }
-
-p{
-    font-weight: bold;
+.subtítulo{
+    text-align: left;
+    margin-top: 30px;
+}
+.div-txt{
+    margin: auto;
+    width:80%;
+}
+.párrafo{
+    text-align: center;
+    margin: auto;
+}
+mark{
+    background-color:rgb(31, 139, 230);
+    padding:0.2em 0.3em;
+}
+.flecha{
+    position:relative;
+    padding:0.01em 0.25em;
+    margin:0.1em;
+}
+.flecha:before{
+    content:"";
+    z-index:-1;
+    left:-0.5em;
+    top:0.23em;
+    border-width:0.5em;
+    border-style:solid;
+    border-color:rgb(37, 120, 189);
+    position:absolute;
+    width:100%;
+    border-left-color:transparent;
+    border-right-color:transparent;
+}
+.etiqueta{
+    text-align: left;
 }
 
-.div-izq{
-    display: inline-block;
-    width: 49%;
-    height: 380px;
-    float: left;
-    padding: 20px;
-    border: 2px solid rgb(31, 139, 230);
+
+
+/**********/
+/* INPUTS */
+/**********/
+select{
+    color: rgb(255,255,255);
+    background-color: rgb(57, 57, 57);
+    font-size: 17px;
+    border: none;
+    text-align: center;
     border-radius: 5px;
+    width: 70%;
 }
-
 .textarea{
     font-size: 15px;
     text-align:justify;
     background-color: rgb(57, 57, 57);
     width: 100%;
-    height:140px;
+    height:130px;
     border: 10px solid rgb(57, 57, 57);
     border-radius: 5px;
     padding: 5px;
+    text-overflow: ellipsis;
     resize: none;
 }
-.textarea2{
-    font-size: 15px;
-    text-align:justify;
-    background-color: rgb(57, 57, 57);
-    width: 100%;
-    height:140px;
-    border: 10px solid rgb(57, 57, 57);
-    border-radius: 5px;
-    padding: 5px;
-    resize: none;
-    cursor: auto;
-}
-
 .text{
-    font-size: 15px;
-    background-color: rgb(57, 57, 57);
-    width: 50%;
-    border: none;
-    border: 10px solid rgb(57, 57, 57);
-    border-radius: 5px;
-    padding: 5px;
-}
-.text2{
     font-size: 15px;
     background-color: rgb(57, 57, 57);
     width: 90%;
@@ -96,46 +116,20 @@ p{
     white-space: nowrap;
     overflow: hidden;
 }
-
-.div-der{
-    display: inline-block;
-    width: 49%;
-    height: 380px;
-    float: right;
-    padding: 20px;
-    border: 2px solid rgb(31, 139, 230);
+.text2{
+    font-size: 15px;
+    background-color: rgb(57, 57, 57);
+    width: 60%;
+    border: none;
+    border: 10px solid rgb(57, 57, 57);
     border-radius: 5px;
-    margin-left: 2%;
+    padding: 5px;
+    cursor: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
-
-.dd-izq{
-    display: inline-block;
-    width: 50%;
-    height: 30%;
-    float: left;
-}
-
-.dd-der{
-    display: inline-block;
-    width: 50%;
-    height: 30%;
-    float: right;
-}
-
-.dd-inf{
-    display: inline-block;
-    width: 100%;
-    height: 70%;
-}
-
-.div-inf{
-    position: absolute;
-    bottom: 0%;
-    padding: 20px;
-    text-align: left;
-}
-
-.botón{
+.botónCo{
     background: rgb(31, 139, 230);
     font-weight: bold;
     border-radius: 30px;
@@ -145,11 +139,210 @@ p{
     width: 100px;
     cursor:pointer;
 }
-
-.botón:hover{
+.botónSig{
+    background: rgb(31, 139, 230);
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    font-size: 17px;
+    padding: 5px;
+    width: 100px;
+    cursor:pointer;
+}
+.botónDescargar{
+    background: rgb(31, 139, 230);
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    font-size: 17px;
+    padding: 5px;
+    width: 190px;
+    cursor:pointer;
+}
+.botónCopiar{
+    background: rgb(31, 139, 230);
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    font-size: 17px;
+    padding: 5px;
+    width: 80px;
+    cursor:pointer;
+}
+.botónCo:hover{
+    background: rgb(37, 120, 189);
+}
+.botónSig:hover{
+    background: rgb(37, 120, 189);
+}
+.botónDescargar:hover{
+    background: rgb(37, 120, 189);
+}
+.botónCopiar:hover{
     background: rgb(37, 120, 189);
 }
 
+
+
+/************/
+/* LOS DIVS */
+/************/
+.div-sup{
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+.ds-izq{
+    display: inline-block;
+    width: 60%;
+    height:50px;
+    float: left;
+}
+.ds-der{
+    display: flex;
+    width: 40%;
+    height:50px;
+    float: right;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+}
+.div-inf{
+    display: inline-block;
+    width: 100%;
+    height: 120px;
+    text-align: left;
+}
+.di-izq{
+    display: inline-block;
+    width: 33.33%;
+    height: 100%;
+    float: left;
+}
+.dii-izq{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.di-cen{
+    display: inline-block;
+    width: 33.33%;
+    height: 100%;
+}
+.di-der{
+    display:inline-block;
+    width: 33.33%;
+    height: 100%;
+    float: right;
+    align-content: bottom;
+}
+.dii-der{
+    display:inline-block;
+    width: 50%;
+    height: 100%;
+    float: right;
+    align-content: bottom;
+}
+.arriba{
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+}
+.abajo{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content:end;
+    align-items: right;
+    text-align: right;
+}
+
+
+
+/*********/
+/* POPUP */
+/*********/
+.overlay{
+	background: rgba(0,0,0,0.7);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+}
+.overlay2{
+	background: rgba(0,0,0,0.7);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+}
+.overlay.active{
+	visibility: visible;
+}
+.overlay2.active {
+	visibility: visible;
+}
+.popup{
+	background: rgb(20, 20, 20);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 5px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 38px;
+	text-align: center;
+	width: 80%;
+	transition: .3s ease all;
+	transform: scale(0.7);
+	opacity: 0;
+}
+.popup2{
+	background: rgb(20, 20, 20);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 5px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 38px;
+	text-align: center;
+	width: 80%;
+	transition: .3s ease all;
+	transform: scale(0.7);
+	opacity: 0;
+}
+.div-btn{
+    display: inline;
+    float:right;
+}
+.btn-cerrar-popup{
+	font-size: 20px;
+	line-height: 20px;
+	display: block;
+	text-align: right;
+	color: #BBBBBB;
+    cursor: pointer;
+}
+.btn-cerrar-popup2{
+	font-size: 20px;
+	line-height: 20px;
+	display: block;
+	text-align: right;
+	color: #BBBBBB;
+    cursor: pointer;
+}
+
+
+
+/*************/
+/* LO BONITO */
+/*************/
 
 /*Exto es para quitar el borde 
 de los textarea e input al hacer clic en ellos*/
@@ -157,8 +350,7 @@ textarea:focus, input:focus{
     outline: none;
 }
 
-
-/*Esto es para cambiar el scroll bar*/
+/*Todo esto es para cambiar el scroll bar*/
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -178,7 +370,6 @@ background-color: rgb(100, 100, 100);
     -webkit-border-radius: 16px;
 }
 
-
 /*Esto es para colorear el texto seleccionado*/
 ::-moz-selection { 
     color: rgb(31, 139, 230);
@@ -186,4 +377,11 @@ background-color: rgb(100, 100, 100);
 ::selection {
     color: rgb(31, 139, 230);  
 }
-    
+
+/*Animación del popup*/
+.popup.active{	
+    transform: scale(1); opacity: 1; 
+}
+.popup2.active{	
+    transform: scale(1); opacity: 1; 
+}
