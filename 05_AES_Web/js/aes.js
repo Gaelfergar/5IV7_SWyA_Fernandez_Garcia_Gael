@@ -28,21 +28,30 @@ $(document).ready(function(){
         //el descifrado
         var descifrado = CryptoJS.AES.decrypt(cifrado, password);
 
-        //crea un link con la etiqueta "a"
+        //crea una etiqueta "a"
         const a = document.createElement("a");
 
-        //el mensaje lo pasa a datos
+        /*
+        El texto descifrado lo pasa a datos planos
+        mediante un flujo de octetos, que es la versión binaria de un archivo de tipo MIME.
+        Los archivos de tipo MIME son los que son enviados y recibidos a través de 
+        navegadores, servidores y clientes web y
+        sirven para reconocer el tipo de archivo que se envía dentro un documento.
+
+        El flujo de octetos puede ser cualquier formato de archivo.
+        */
         blob = new Blob([descifrado.toString(CryptoJS.enc.Utf8)], {type: "octet/stream"}),
 
-        //manda los datos a un url
+        //los datos son mandados a un url
         url = window.URL.createObjectURL(blob);
 
-        //asigna el url a el link "a"
+        //asigna el url a el link de la etiqueta "a"
         a.href = url;
 
-        //"a" se descarga con este nombre
+        //el url se descarga con este nombre
         a.download = 'mensajeDescifrado.txt';
 
+        //método click
         a.click();
 
         //se descarga
