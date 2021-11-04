@@ -1,23 +1,34 @@
+package RSA;
+
 import java.math.*;
-import java.util.Random;
+import java.util.*;
 
 public class RSA {
-    
-    //ejemplo aquí https://www.javainuse.com/rsagenerator
-    
+
     //RSA es para cifrar números
     
     //números primos grandes
-    
     int tamprimo;
-    BigInteger p, q, n; //3 DÍGITOS PORQUE EXPLOTA
-    BigInteger fi;
-    BigInteger e, d;
+    BigInteger p, q, n; //n = p*q
+    BigInteger fi; //fi = (p-1)*(q-1)
+    BigInteger e, d; //"e" es un coprimo/primo relativo de n, donde e: 1 < e < fi(n)
+                     //d = e^1 mod(fi)  (Es el inverso multiplicativo de e)
     
     //Constructor de RSA
     public RSA (int tamprimo){
         this.tamprimo = tamprimo;
+        generarPrimos();
+        generarClaves();
     }
+    
+    //Obtener p y q, para luego generar las claves. Lo uso para cifrar y descifrar.
+    public RSA(BigInteger p, BigInteger q, int tamprimo) {
+        this.tamprimo=tamprimo;
+        this.p = p;
+        this.q = q;
+        generarClaves();             
+    }
+    
     
     //Generar los números primos
     public void generarPrimos(){
@@ -30,8 +41,8 @@ public class RSA {
     public void generarClaves(){
         //n = p*q
         //fi = (p-1)*(q-1)
-        //"e" es un coprimo de n, donde 1 < e < fi(n)
-        //d = e^1 mod(fi)  Es el inverso multiplicativo de e
+        //"e" es un coprimo/primo relativo de n, donde e: 1 < e < fi(n)
+        //d = e^1 mod(fi)  (Es el inverso multiplicativo de e)
         n = p.multiply(q);
         fi = p.subtract(BigInteger.valueOf(1));
         fi = fi.multiply(q.subtract(BigInteger.valueOf(1)));
@@ -46,6 +57,7 @@ public class RSA {
     
     //Cifrar con la clave pública e y n
     public BigInteger[] cifrar(String mensaje){
+        
         int i;
                     //1 porque vamos bit por bit
         byte[] temp = new byte[1];
@@ -88,5 +100,23 @@ public class RSA {
         }
         return (new String(charArray));
     }
-}
 
+    public BigInteger getP(){
+        return p;
+    }
+    public BigInteger getQ(){
+        return q;
+    }
+    public BigInteger getN(){
+        return n;
+    }
+    public BigInteger getFi(){
+        return fi;
+    }
+    public BigInteger getE(){
+        return e;
+    }
+    public BigInteger getD(){
+        return d;
+    }
+}
